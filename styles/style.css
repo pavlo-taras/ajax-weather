@@ -1,13 +1,15 @@
-.search {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 120px;
-    margin-top: 1px;
-    padding: 1px 0 0 0;
-    z-index: 2;
+body {
+    background: lightblue;
+}
+
+#weather {
     width: 450px;
     margin: auto;
+}
+
+.search {
+    margin-top: 20px;
+    top: 20px;
 }
 
 .search-wrapper {
@@ -45,4 +47,13 @@ input#search {
     margin: 0;
     border-top: 1px solid #e9e9e9;
     background-color: #fff;
+}
+
+.invisible {
+    display: none;
+}
+
+.nav a {
+    background-color: blue !important;
+    text-transform: none !important;
 }

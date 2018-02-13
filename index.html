@@ -8,21 +8,51 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="styles/style.css">
+        
 </head>
 <body>
-    <div class="search">
-        <div class="search-wrapper card">
-            <form>
-                <input id="search" placeholder="Enter city, postcode, place"><i class="material-icons">search</i>
-            </form>
-            <div class="search-results"></div>
+        <link rel="stylesheet" href="styles/style.css">
+    
+    <div id="weather">        
+        <div class="search">
+            <div class="search-wrapper card">
+                <form>
+                    <input id="search" placeholder="Enter city, postcode, place"><i class="material-icons">search</i>
+                </form>
+                <div class="search-results"></div>
+            </div>
+        </div>
+        <h2>Погода</h2>        
+        <div class="progress invisible">
+            <div class="indeterminate"></div>
+        </div>
+        <div id="result" class="invisible">
+            <h5 id="place"></h5>
+            <h6 id="date"></h6>
+            <span id="time" hidden></span>
+            <ul>
+                <li><canvas height="200" width="200" id="icon"></canvas></li>
+                <li><strong>Температура:</strong> <span id="temperature"></span>°C</li>
+                <li><strong>Характеристика погоди:</strong> <span id="summary"></span></li>
+                <li><strong>Вітер:</strong> <span id="wind"></span> м/с <span id="wind_direction">↑</span></li>
+                <li><strong>Вологість:</strong> <span id="humidity"></span>%</li>
+                <li><strong>Тиск:</strong> <span id="pressure"></span> гПа</li>
+            </ul>
+            <div class="nav">
+                <a id="prevDay" class="left btn"><i class="material-icons left">navigate_before</i>Попередній день</a>
+                <a id="nextDay" class="right btn"><i class="material-icons right">navigate_next</i>Наступний день</a>
+            </div>
         </div>
     </div>
-            
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <div id="forecast"></div>
+
+    <!--Import jQuery before materialize.js-->    
+    <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> 
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/uk.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
